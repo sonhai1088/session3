@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <button>Weight(kg)</button>
+    <input id = "chieuCao"/>
+    <button>Heigh(m)</button>
+    <input id = "canNang"/>
+
+    <button onclick="tinhToan()">Check</button>
+    <br/>
+    <img src="BMI.jpg">
+    <script>
+
+
+        function tinhToan(){
+            let cao = Number(document.getElementById("chieuCao").value);
+            let nang = Number(document.getElementById("canNang").value);
+            let bmi = nang / Math.pow(cao, 2);
+
+             if (bmi < 18.5){
+                 alert("bmi = " + bmi + " (Underweight)");
+             }
+             else if (bmi <25){
+                 alert("bmi = " + bmi + " (Normal)");
+             }
+             else if (bmi < 30){
+                 alert("bmi = " + bmi + " (Overweight)");
+             }
+             else{
+                 alert("bmi = " + bmi + " (Obese)");
+             }
+        }
+    </script>
+</body>
+</html>
