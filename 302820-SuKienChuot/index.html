@@ -18,8 +18,9 @@
         <br/>
         <img id = "nenCo" src="images/nenCo.png"/>
         <br/>
-        <p>Click button below to move chicken to right</p>
+        <p>Click button below to move chicken</p>
         <button type="button" onclick="moveRight()">Move Right</button>
+        <button type="button" onclick="moveLeft()">Move Left</button>
 
     </form>
 <script>
@@ -32,6 +33,9 @@
     }
     function moveRight() {
         imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    function moveLeft() {
+        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
     }
     window.onload = init;
 
