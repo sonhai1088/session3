@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = parseInt(prompt("Nhập lương của bạn:"));
+    let thue5 = luong * 5 / 100;
+    let thue10 = 250000 + (luong - 5000000) * 10 / 100;
+    let thue15 = 750000 + (luong - 10000000) * 15 / 100;
+    let thue20 = 1950000 + (luong - 18000000) * 20 / 100;
+    let thue25 = 4750000 + (luong - 32000000) * 25 / 100;
+    let thue30 = 9750000 + (luong - 52000000) * 30 / 100;
+    let thue35 = 18150000 + (luong - 80000000) * 35 / 100;
+    if (luong <= 5000000){
+        document.write("Thuế thu nhập là: " + thue5);
+    } else if (luong <= 10000000) {
+        document.write("Thuế thu nhập là: " + thue10);
+    } else if (luong <= 18000000){
+        document.write("Thuế thu nhập là: " + thue15);
+    } else if (luong <= 32000000){
+        document.write("Thuế thu nhập là: " + thue20);
+    } else if (luong <= 52000000){
+        document.write("Thuế thu nhập là: " + thue25);
+    } else if (luong <= 80000000){
+        document.write("Thuế thu nhập là: " + thue30);
+    } else if (luong > 80000000) {
+        document.write("Thuế thu nhập là: " + thue35);
+    } else {
+        document.write("Bạn nhập chưa đúng");
+    }
+</script>
+</body>
+</html>

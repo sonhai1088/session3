@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập cạnh thứ nhất"));
+    let b = parseInt(prompt("Nhập cạnh thứ hai"));
+    let c = parseInt(prompt("Nhập cạnh thứ ba"));
+    let ab = a + b;
+    let bc = b + c;
+    let ac = a + c;
+    if ( a > 0 && b > 0 && c > 0) {
+        if ( ab > c && bc > a && ac > b){
+            document.write("Bạn nhập đúng 3 cạnh của tam giác");
+        } else {
+            document.write("3 cạnh không phải của một tam giác");
+        }
+    } else {
+        document.write("Bạn nhập không đúng");
+    }
+</script>
+</body>
+</html>

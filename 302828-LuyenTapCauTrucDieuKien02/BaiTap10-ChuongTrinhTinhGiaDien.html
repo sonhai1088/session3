@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numFirst = parseInt(prompt("Nhập số điện cũ:"));
+    let numNew = parseInt(prompt("Nhập số điện mới:"));
+    let num = numNew - numFirst;
+    let price1 = 1500; //cho 50 số đầu
+    let numPrice1 = num*price1;
+    let price2 = 2000; // cho từ số 51 đến 100
+    let numPrice2 = price1 * 50 + (num - 50) * price2;
+    let price3 = 3000; // cho số từ 100 trở lên
+    let numPrice3 = price1 * 50 + price2 * 100 + (num - 100) * price3;
+    if (num <= 50){
+        document.write("Giá điện của bạn là: " + numPrice1 + " VNĐ");
+    } else if ( num <= 100){
+        document.write("Giá điện của bạn là: " + numPrice2 + " VNĐ");
+    } else {
+        document.write("Giá điện của bạn là: " + numPrice3 + " VNĐ");
+    }
+</script>
+</body>
+</html>

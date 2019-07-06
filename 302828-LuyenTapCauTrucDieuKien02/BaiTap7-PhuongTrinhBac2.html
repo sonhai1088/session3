@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //ax2 + bx + c = 0
+    // delta = b2 - 4ac
+    // delta < 0: Phương trình vô nghiệm
+    // delta = 0: Phương trình có nghiệm kép: x1 = x2 = -b/2a
+    // delata > 0: Phương trình có 2 nghiệm: x1 = (-b+ căn deta)/2a và x2 = (-b - căn delta)/2a
+
+    let a;
+    let b;
+    let c;
+    let delta = b*b - 4*a*c;
+    let can = Math.sqrt(delta);
+    let x1 = (-b - can)/(2*a);
+    let x2 = (-b + can)/(2*a);
+    if (delta < 0){
+        document.write("Phương trình vô nghiệm");
+    } else if (delta = 0){
+        document.write("Nghiệm của phương trình là: x1 = x2 = " + -b/2a );
+    } else {
+        document.write("Nghiệm của phương trình là: x1 =  " + x1 + " x2 = " + x2 );
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id = "soTienBanDau" type="Number" />Số tiền gửi
+<br/>
+<input id = "soThangGui" type="Number" />Số tháng gửi
+<br/>
+<input id = "laiSuat" type="Number" />Lãi suất hiện thời(%/năm)
+<br/>
+<button id = "tinhToan" onclick="tinh()">Tính lãi</button>
+<p id = "ketQua"></p>
+
+<script>
+    //Tinh theo công thức: A = P(1+r/n)^(n*t)
+    //A: Giá trị tương lai
+    //P: Số tiền gốc
+    //r: lãi suất hàng năm (trong ví dụ là hàng tháng)
+    //n: số lần tiền lãi nhập gốc mỗi năm (Đang tính theo tháng)
+    //t = số năm tiền được mượn (Đang tính theo tháng)
+    function tinh() {
+        let soTienBanDau = parseInt(document.getElementById("soTienBanDau").value);
+        let soThang = parseInt(document.getElementById("soThangGui").value);
+        let laiSuat = parseFloat(document.getElementById("laiSuat").value) / 12;
+        let n = 1; // số lần nhập gốc mỗi chu kỳ tính lãi
+        let r = laiSuat / 100;
+        let tienLai = soTienBanDau * Math.pow((1+r/n),(n * soThang)) - soTienBanDau;
+        let ketQua = document.getElementById("ketQua");
+        ketQua.innerHTML = "Số tiền lãi " + soThang + " tháng là: " + tienLai + " VNĐ";
+    }
+
+</script>
+</body>
+</html>
