@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+
+</head>
+<body>
+<div id="divImg">
+    <img id="img1" name="img" src="images/funny-cat1_part1x1.jpg" onclick="changeImg(1);" alt="funny-cat1_part1x1">
+    <br>
+    <img id="img2" name="img" src="images/funny-cat1_part2x1.jpg" onclick="changeImg(2);" alt="funny-cat1_part2x1">
+    <br>
+    <img id="img3" name="img" src="images/funny-cat1_part3x1.jpg" onclick="changeImg(3);" alt="funny-cat1_part3x1">
+    <br>
+    <img id="img4" name="img" src="images/funny-cat1_part4x1.jpg" onclick="changeImg(4);" alt="funny-cat1_part4x1">
+    <br>
+    <img id="img5" name="img" src="images/funny-cat1_part5x1.jpg" onclick="changeImg(5);" alt="funny-cat1_part5x1">
+</div>
+<script>
+    function changeImg(index) {
+        let imgCat = 'funny-cat1_part' + Puzzle + 'x1';
+        let imgMonkey = 'monkey_part' + Puzzle + 'x1';
+        let imgPanda = 'panda_swap_part' + Puzzle + 'x1';
+        let img = document.getElementById('img' + Puzzle);
+        if (img.alt == imgCat) {
+            img.alt = imgMonkey;
+        } else if (img.alt == imgMonkey) {
+            img.alt = imgPanda;
+        } else if (img.alt == imgPanda) {
+            img.alt = imgCat;
+        }
+        img.src = 'images/' + img.alt + '.jpg';
+        checkImg();
+    }
+    function checkImg() {
+        let img1 = document.getElementById('img1');
+        let img2 = document.getElementById('img2');
+        let img3 = document.getElementById('img3');
+        let img4 = document.getElementById('img4');
+        let img5 = document.getElementById('img5');
+        let divImg = document.getElementById('divImg');
+        if (img1.alt == 'funny-cat1_part1x1' &&
+            img2.alt == 'funny-cat1_part2x1' &&
+            img3.alt == 'funny-cat1_part3x1' &&
+            img4.alt == 'funny-cat1_part4x1' &&
+            img5.alt == 'funny-cat1_part5x1') {
+            alert("Bạn đã ghép đúng");
+        } else if (img1.alt == 'monkey_part1x1' &&
+            img2.alt == 'monkey_part2x1' &&
+            img3.alt == 'monkey_part3x1' &&
+            img4.alt == 'monkey_part4x1' &&
+            img5.alt == 'monkey_part5x1') {
+            alert("Bạn đã ghép đúng");
+        } else if (img1.alt == 'panda_swap_part1x1' &&
+            img2.alt == 'panda_swap_part2x1' &&
+            img3.alt == 'panda_swap_part3x1' &&
+            img4.alt == 'panda_swap_part4x1' &&
+            img5.alt == 'panda_swap_part5x1') {
+            alert("Bạn đã ghép đúng");
+        } else {
+        }
+    }
+</script>
+</body>
+</html>
