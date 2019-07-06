@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //điểm trung bình >=8: giỏi, từ =6 > 8: Khá, từ =5 > 6: Trung bình, còn lại kém
+    let diemKiemtra = parseInt(prompt("Nhập điểm kiểm tra:"));
+    let diemGiuaky = parseInt(prompt("Nhập điểm giữa kỳ:"));
+    let diemCuoiky = parseInt(prompt("Nhập điểm cuối kỳ:"));
+    let diemTB = (diemKiemtra + diemGiuaky + diemCuoiky) / 3;
+
+    if (diemTB >= 8) {
+        document.write("Điểm của bạn: " + diemTB + ", Bạn xếp loại giỏi.");
+    } else if (diemTB >= 6){
+        document.write("Điểm của bạn: " + diemTB + ", Bạn xếp loại khá.");
+    } else if (diemTB >= 5){
+        document.write("Điểm của bạn: " + diemTB + ", Bạn xếp loại trung bình.");
+    } else {
+        document.write("Điểm của bạn: " + diemTB + ", Bạn xếp loại kém.");
+    }
+</script>
+</body>
+</html>

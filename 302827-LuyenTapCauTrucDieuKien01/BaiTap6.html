@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Giá sản phẩm: 10.000 vnđ
+    //Doanh số trên 1000 sản phẩm: Thưởng 20 %, từ 500 > 1000: Thương 10%; < 500: Không có thưởng
+
+
+    let a = parseFloat(prompt("Nhập số sản phẩm bán được:"));
+    let giaSanpham = 10000;
+    let luongSanPham = a * giaSanpham;
+    let thuong20 = luongSanPham * 1.2;
+    let thuong10 = luongSanPham * 1.1;
+    if (a >= 1000) {
+        let luongTong = luongSanPham + thuong20;
+        document.write("Bạn bán được: " + a + " sản phẩm" + ", Lương của bạn: " + luongSanPham + ", Lương thưởng: " + thuong20 + ", Tổng lương: " + luongTong + ".");
+    } else if (a >=500) {
+        let luongTong = luongSanPham + thuong10;
+        document.write("Bạn bán được: " + a + " sản phẩm" + ", Lương của bạn: " + luongSanPham + ", Lương thưởng: " + thuong10 + ", Tổng lương: " + luongTong + ".")
+    } else {
+        document.write("Bạn bán được: " + a + " sản phẩm" + ", Lương của bạn: " + luongSanPham + " Bạn không có thưởng.")
+    }
+
+</script>
+</body>
+</html>
